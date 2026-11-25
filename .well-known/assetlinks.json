@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rawbitlabs.typearena",
+      "sha256_cert_fingerprints": [
+        "97:54:A8:C8:C4:D0:FB:FF:EB:BB:30:FA:E1:72:33:CB:F2:8A:62:CD:66:25:91:BF:6D:9C:19:82:F4:9A:A8:D7",
+        "57:8F:58:C4:CE:D2:AD:F0:39:1D:3B:24:9E:23:68:EA:E1:6D:02:A2:78:CC:FA:95:DE:AA:86:CC:CB:6D:C3:AD"
+      ]
+    }
+  }
+]
