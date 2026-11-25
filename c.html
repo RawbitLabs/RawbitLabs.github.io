@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Type Arena · You've been challenged!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Opened only when the app is not installed (or App Links are not verified yet): installed apps catch /c links directly. -->
+<main class="center">
+  <h1>You've been challenged!</h1>
+  <p class="lead">A friend wants to race you in Type Arena. Beat their ghost!</p>
+  <p>
+    <a class="button" id="open" href="#">OPEN IN GAME</a>
+    <a class="button alt" href="https://play.google.com/store/apps/details?id=com.rawbitlabs.typearena">GET THE GAME</a>
+  </p>
+  <p class="meta">Just installed it? Copy this link and open the game — it will pick the challenge up.</p>
+  <p><a class="button alt" id="copy" href="#">COPY LINK</a></p>
+  <p class="meta"><a href="privacy.html">Privacy Policy</a></p>
+</main>
+<script>
+  const c = new URLSearchParams(location.search).get("c") || "";
+  const deep = "typearena://race?c=" + encodeURIComponent(c);
+  document.getElementById("open").href = deep;
+  document.getElementById("copy").addEventListener("click", e => {
+    e.preventDefault();
+    navigator.clipboard && navigator.clipboard.writeText(location.href).then(() => { e.target.textContent = "COPIED!"; });
+  });
+</script>
+</body>
+</html>
